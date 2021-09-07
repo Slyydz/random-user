@@ -6,6 +6,6 @@ export const getUser = async () => {
     })
     .then(response => response.json())
     .then(parsedResponse => {
-        return parsedResponse.results[0];
+        return parsedResponse.results[Math.floor(Math.random()*parsedResponse.results.length)];
     })
 }
