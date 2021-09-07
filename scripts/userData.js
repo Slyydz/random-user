@@ -2,9 +2,9 @@
 export const User = (inputUser) => {
     //Lines 4-7 are used tom format dates
     const dateObjBirth = new Date(inputUser.dob.date);
-    const formattedDateBirth = dateObjBirth.toDateString();
+    const formattedDateBirth = dateObjBirth.toLocaleDateString();
     const dateObjReg = new Date(inputUser.registered.date);
-    const formattedDateReg = dateObjReg.toDateString();
+    const formattedDateReg = dateObjReg.toLocaleDateString();
 
 	return `
             <img src="${inputUser.picture.large}" alt="Picture of ${inputUser.name.first}">
