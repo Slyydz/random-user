@@ -1,4 +1,6 @@
+//User Display to Dom export that takes input of array from API
 export const User = (inputUser) => {
+    //Lines 4-7 are used tom format dates
     const dateObjBirth = new Date(inputUser.dob.date);
     const formattedDateBirth = dateObjBirth.toDateString();
     const dateObjReg = new Date(inputUser.registered.date);
@@ -14,7 +16,7 @@ export const User = (inputUser) => {
             <h4>Age: ${inputUser.dob.age}</h4>
             <h4>DOB: ${formattedDateBirth}</h4>
             <h4> Date Registered: ${formattedDateReg} - ${inputUser.registered.age} years ago</h4>
-            <h5>${inputUser.gender}</h5>
+            <h4>${inputUser.gender}</h4>
 
             
 

@@ -1,3 +1,4 @@
+//Access the API and return what we accessed
 export const getUser = async () => {
     return fetch("https://randomuser.me/api/", {
         headers: {
@@ -6,6 +7,6 @@ export const getUser = async () => {
     })
     .then(response => response.json())
     .then(parsedResponse => {
-        return parsedResponse.results[Math.floor(Math.random()*parsedResponse.results.length)];
+        return parsedResponse.results[0];
     })
 }
